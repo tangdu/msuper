@@ -4,9 +4,9 @@
   "description": "基于iView的管理后台",
   "main": "index.js",
   "scripts": {
-    "init": "webpack --progress --config build/webpack.dev.config.js",
-    "dev": "webpack-dev-server --content-base ./  --inline --hot --compress --config build/webpack.dev.config.js",
-    "build": "webpack --progress --hide-modules --config build/webpack.prod.config.js",
+    "init": "webpack --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --content-base ./  --inline --hot --compress --config build/webpack.dev.conf.js",
+    "build": "webpack --progress --hide-modules --config build/webpack.prod.conf.js",
     "lint": "eslint --fix --ext .js,.vue src",
     "test": "npm run lint"
   },
@@ -81,6 +81,11 @@
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.10.1",
     "webpack-merge": "^4.1.1",
-    "webpack-uglify-parallel": "^0.1.4"
+    "webpack-uglify-parallel": "^0.1.4",
+    "friendly-errors-webpack-plugin": "^1.1.3",
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-hot-middleware": "^2.18.0",
+    "eventsource-polyfill": "^0.9.6",
+    "optimize-css-assets-webpack-plugin": "^1.3.0"
   }
 }
